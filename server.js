@@ -6,7 +6,9 @@ const pokemon = require('./models/pokemon')
 app.set('view engine', 'ejs')
 
 app.get('/pokemon',(req, res) =>{
-    res.json(pokemon)
+    res.render('index.ejs',{
+        pokemon: pokemon
+    })
 })
 
 app.get('/', (req, res) => {
